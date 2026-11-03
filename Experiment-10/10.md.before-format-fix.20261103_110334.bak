@@ -1,0 +1,122 @@
+# COMPETITIVE CODING-II (CC-II)
+# EXPERIMENT-10
+
+## 01. AIM
+
+To implement graph traversal algorithms using Depth-First Search (DFS) in C, C++, Java, and Python.
+
+## 02. OBJECTIVES
+
+- Understand graph traversal and connectivity.
+- Implement recursive and iterative DFS.
+- Identify connected components in a grid.
+- Determine path existence in an undirected graph.
+- Analyze time and space complexity.
+
+## 03. THEORY
+
+Depth-First Search (DFS) is a graph traversal algorithm that explores vertices as deeply as possible before backtracking.
+
+DFS can be implemented using recursion or an explicit stack.
+
+This experiment covers two problems:
+
+1. **Number of Islands:** Counts connected land regions in a two-dimensional grid.
+2. **Find if Path Exists in Graph:** Determines whether a path connects two vertices in an undirected graph.
+
+## 04. SOFTWARE AND HARDWARE REQUIREMENTS
+
+**Software Requirements:**
+- Operating System: Ubuntu Linux
+- C Compiler: GCC 15.2.0
+- C++ Compiler: G++ 15.2.0
+- Java Compiler: JDK 17.0.20.1
+- Python Interpreter: Python 3.14.4
+
+**Hardware Requirements:**
+- Processor: Intel/AMD
+- RAM: Minimum 4 GB
+- Storage: Available disk space
+
+## 05. PROBLEM DESCRIPTION
+
+### 5.1 Number of Islands (10.1)
+
+Given a two-dimensional grid containing '1' (land) and '0' (water), count the number of islands. Horizontally and vertically connected land cells form one island.
+
+**Algorithm:** Recursive DFS.
+
+**Expected Output:**
+```text
+Number of Islands: 1  5.2 Find if Path Exists in Graph (10.2)
+Given an undirected graph, a source vertex, and a destination vertex, determine whether a valid path exists between them.
+
+Algorithm: Iterative DFS using a stack.
+
+Expected Output:
+Number of Vertices: 6
+Source: 0
+Destination: 5
+Valid Path Exists: false
+
+
+06. METHODOLOGY
+Problem 10.1:
+1. Traverse every cell of the grid.
+2. When an unvisited land cell is found, increment the island counter.
+3. Apply recursive DFS to visit connected land cells.
+4. Mark visited cells as water.
+5. Return the total island count.
+Problem 10.2:
+1. Construct the undirected graph.
+2. Initialize a visited array and stack.
+3. Push the source vertex onto the stack.
+4. Pop vertices and check whether the destination is reached.
+5. Visit all unvisited adjacent vertices.
+6. Return true if a path exists; otherwise, return false.
+07. IMPLEMENTATION AND SOURCE FILES
+Problem	C++	C	Java	Python
+Number of Islands	10.1.cpp	10.1.c	10.1.java	10.1.py
+Path Exists in Graph	10.2.cpp	10.2.c	10.2.java	10.2.py
+
+Implementation Details:
+- Problem 10.1 uses recursive DFS.
+- Problem 10.2 uses iterative DFS with a stack.
+- The C implementation of 10.2 uses an adjacency matrix.
+- The C++, Java, and Python implementations of 10.2 use adjacency lists.
+08. EXPERIMENTAL RESULTS
+Both problems have implementations in all four programming languages.
+Problem	Sample Result
+Number of Islands	1 island
+Path Exists in Graph	false
+
+The expected results demonstrate successful identification of connected regions and graph reachability.
+09. COMPLEXITY ANALYSIS
+Let R and C represent grid dimensions, V represent vertices, and E represent edges.
+Problem	Time Complexity	Auxiliary Space
+Number of Islands	O(R × C)	O(R × C)
+Path Exists (Adjacency List)	O(V + E)	O(V + E)
+Path Exists (Adjacency Matrix)	O(V² + E) including construction	O(V²)
+
+10. OBSERVATIONS
+1. DFS identifies connected components efficiently.
+2. Visited tracking prevents repeated traversal.
+3. Recursive DFS uses the function call stack.
+4. Iterative DFS uses an explicit stack.
+5. Adjacency lists are suitable for sparse graphs.
+6. Adjacency matrices require O(V²) memory.
+11. CONCLUSION
+This experiment demonstrates recursive and iterative Depth-First Search through two graph problems. Number of Islands illustrates grid connectivity, while Find if Path Exists in Graph demonstrates graph reachability. Both problems were implemented in C, C++, Java, and Python, providing practical understanding of graph traversal, graph representations, and algorithm complexity.
+12. REFERENCES
+1. LeetCode - Number of Islands.
+2. LeetCode - Find if Path Exists in Graph.
+3. C and C++ programming documentation.
+4. Java SE documentation.
+5. Python official documentation.
+
+Course: Competitive Coding-II (CC-II)
+Experiment Number: 10
+Total Problems: 2
+Programming Languages: C, C++, Java, Python
+Total Source Files: 8
+END OF EXPERIMENT-10
